@@ -6,6 +6,12 @@ from . import views
 urlpatterns = [
    
     path("",views.index,name="ShopHome"),
-    # path("about",views.about,name="about")
+    path("about",views.about,name="AboutUs"),
+    path('contact/', views.contact,name="ContactUs"),
+    path('tracker', views.tracker,name="TrackingStatus"),
+  path('search/', views.search,name="Search"),
+    path('productview/', views.productView,name="PoductView"),
+    path('checkout/', views.checkout,name="Checkout"),
+
 
 ]
