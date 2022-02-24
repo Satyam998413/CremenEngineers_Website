@@ -28,3 +28,12 @@
 </form>
 </div>
 {% endblock %}
+{% block js %}
+<script>
+
+{% if thank %}
+alert('Thanks for submited yours details {{name}}.My Teams contact you as well as soon possible ');
+document.location = "/shop";
+{% endif %}
+</script>
+{% endblock %}
