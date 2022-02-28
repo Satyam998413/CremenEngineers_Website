@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from msilib.schema import Directory
 from pathlib import Path
 import os
+# for django message freamwork
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,6 +36,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'shop.apps.ShopConfig',
+    'blog.apps.BlogConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "blog",
+    'blog2',
     
 ]
 
@@ -141,3 +145,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
   
 ]
+
+MESSAGE_TAGS = {
+    messages.ERROR:'danger'
+}
