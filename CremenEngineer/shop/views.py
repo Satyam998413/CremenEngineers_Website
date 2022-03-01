@@ -87,8 +87,6 @@ def tracker(request):
     return render(request, 'shop/tracker.html')
 
 
-    return render(request, 'shop/tracker.html')
-
 
 def productView(request, myid):
 
